@@ -25,7 +25,7 @@ nav {
 }
 
 .logo {
-    height: 50px;
+    height: 80px;
 }
 
 nav ul {
@@ -41,7 +41,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* Texto blanco para contraste */
+    color: black; /* Texto negro para contraste */
     font-weight: bold;
 }
 
@@ -54,6 +54,7 @@ nav ul li a {
     align-items: center;
     text-align: center;
     color: #ffffff;
+    
 }
 
 #background-video {
@@ -70,14 +71,20 @@ nav ul li a {
     position: relative;
     z-index: 1;
     color: #ffffff; /* Texto blanco */
+    margin-bottom: 100px;
+    
 }
 
 .hero-content h1 {
     font-size: 3em; /* Reduce el tamaño del h1 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para destacar el texto */
 }
+
 
 .hero-content p {
     font-size: 2em; /* Mantiene el tamaño del párrafo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0); /* Sombra para destacar el texto */
+
 }
 
 .services {
@@ -91,14 +98,15 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 80px;
     padding: 20px;
 }
 
 .image-container {
     position: relative;
-    width: 100px; /* Ajusta el tamaño de las imágenes */
-    height: 100px; /* Ajusta el tamaño de las imágenes */
+    width: 200px; /* Ajusta el tamaño de las imágenes */
+    height: 200px; /* Ajusta el tamaño de las imágenes */
+    perspective: 1000px;
 }
 
 .round-image {
@@ -106,6 +114,8 @@ nav ul li a {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    transition: transform 0.6s; /* Añadido para la transición de giro */
+    transform-style: preserve-3d; /* Añadido para el efecto de 3D */
 }
 
 .overlay {
@@ -120,10 +130,15 @@ nav ul li a {
     border-radius: 0 0 50% 50%;
     opacity: 0;
     transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.6s; /* Añadido para la transición de giro */
+    transform: rotateY(180deg); /* Añadido para el efecto de giro */
 }
-
+.image-container:hover .round-image {
+    transform: rotateY(180deg); /* Añadido para el efecto de giro */
+}
 .image-container:hover .overlay {
     opacity: 1;
+    transform: rotateY(0deg); /* Añadido para el efecto de giro */
 }
 
 .contact-container {
@@ -161,7 +176,7 @@ nav ul li a {
 
 footer {
     background-color: #4caf50; /* Tono verde */
-    color: #ffffff; /* Texto blanco para contraste */
+    color: black; /* Texto blanco para contraste */
     border-top: 2px solid #e0e0e0;
     text-align: center;
     padding: 20px 0;
@@ -174,9 +189,13 @@ footer {
 footer .social-media a {
     margin: 0 10px;
     text-decoration: none;
-    color: #ffffff; /* Texto blanco para contraste */
+    color: black; /* Texto blanco para contraste */
 }
+footer .social-media img{
+    width: 30px;
+    height: 30px;
 
+}
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -227,7 +246,14 @@ form button:hover {
 }
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .whatsapp {
+        width: 40px; /* Ajusta el tamaño del logo en pantallas pequeñas */
+        height: 40px;
+        bottom: 10px; /* Ajusta la posición en pantallas pequeñas */
+        right: 10px;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: flex-start;
@@ -257,10 +283,29 @@ form button:hover {
     }
 
     .hero-content h1 {
-        font-size: 2.5em; /* Ajusta el tamaño del h1 en pantallas pequeñas */
+        font-size: 2em; /* Ajusta el tamaño del h1 en pantallas pequeñas */
     }
 
     .hero-content p {
-        font-size: 1.2em; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
+        font-size: 1em; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
+    }
+
+    .images {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-container {
+        width: 80px; /* Ajusta el tamaño de las imágenes en pantallas pequeñas */
+        height: 80px;
+    }
+
+    footer {
+        position: static; /* Cambia el footer a posición estática en pantallas pequeñas */
+        margin-top: 20px; /* Añade un margen superior para separar el contenido */
+    }
+
+    .image-container:hover .overlay {
+        opacity: 1;
     }
 }
