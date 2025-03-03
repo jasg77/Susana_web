@@ -19,10 +19,64 @@
             </ul>
         </nav>
     </header>
-    <main style="text-align: center;align-items: center;">
-        <h1>¿Cómo trabajo?</h1>
-        <p>Trabajo de manera personalizada con cada cliente para desarrollar un plan nutricional que se adapte a sus necesidades y objetivos.</p>
-    </main>
+    <main>
+        <h1 style="margin-bottom: 10%;">¿Cómo trabajo?</h1>
+        <section class="info-section">
+            <div class="card" id="card1">
+                <img src="imagenes/dieta-mediterranea.jpg" alt="Dieta Mediterránea">
+                <h2>Mi Enfoque.</h2>
+                <a href="#" class="leer-mas" data-target="details1">Leer más</a>
+            </div>
+            <div class="card" id="card2">
+                <img src="imagenes/dieta.jpg" alt="¿Qué es la Dieta Mediterránea?">
+                <h3>Dieta Mediterránea.</h3>
+                <a href="#" class="leer-mas" data-target="details2">Leer más</a>
+            </div>
+            <div class="card" id="card3">
+                <img src="imagenes/beneficios.jpg" alt="Beneficios para la Salud">
+                <h3>Beneficios.</h3>
+                <a href="#" class="leer-mas" data-target="details3">Leer más</a>
+            </div>
+            <div class="card" id="card4">
+                <img src="imagenes/metodo.jpg" alt="Mi Método de Trabajo">
+                <h3>Mi Método.</h3>
+                <a href="#" class="leer-mas" data-target="details4">Leer más</a>
+            </div>
+        </section>
+
+        <section class="details-section" style="align-items: center;">
+            <div class="details" id="details1" style="align-items: center;">
+                <h2>Mi Enfoque Nutricional: La Dieta Mediterránea</h2>
+                <p>¡Bienvenidos a mi consulta de nutrición! Soy [Nombre de la Nutricionista], y me especializo en guiar a mis pacientes hacia una vida más saludable a través de la dieta mediterránea. Este enfoque nutricional no solo es delicioso, sino que también está respaldado por numerosos estudios científicos que demuestran sus beneficios para la salud.</p>
+            </div>
+            <div class="details" id="details2">
+                <h3>¿Qué es la Dieta Mediterránea?</h3>
+                <p>La dieta mediterránea se basa en los hábitos alimenticios tradicionales de los países que bordean el Mar Mediterráneo. Se caracteriza por un alto consumo de frutas, verduras, legumbres, frutos secos, cereales integrales, pescado y aceite de oliva. Además, incluye un consumo moderado de productos lácteos y vino tinto, y un bajo consumo de carnes rojas y dulces.</p>
+            </div>
+            <div class="details" id="details3">
+                <h3>Beneficios para la Salud</h3>
+                <ul>
+                    <li><strong>Mejorar la salud cardiovascular</strong>: Gracias a su alto contenido en grasas saludables y antioxidantes.</li>
+                    <li><strong>Controlar el peso</strong>: Al enfocarse en alimentos frescos y naturales, es más fácil mantener un peso saludable.</li>
+                    <li><strong>Prevenir enfermedades crónicas</strong>: Como la diabetes tipo 2 y ciertos tipos de cáncer.</li>
+                    <li><strong>Aumentar la longevidad</strong>: Estudios han demostrado que las personas que siguen esta dieta tienden a vivir más tiempo y con mejor calidad de vida.</li>
+                </ul>
+            </div>
+            <div class="details" id="details4">
+                <h3>Mi Método de Trabajo</h3>
+                <p>En mi consulta, personalizo cada plan nutricional para adaptarlo a tus necesidades y objetivos específicos. El proceso incluye:</p>
+                <ol>
+                    <li><strong>Evaluación Inicial</strong>: Analizo tu historial médico, hábitos alimenticios y estilo de vida.</li>
+                    <li><strong>Plan Personalizado</strong>: Diseño un plan de alimentación basado en la dieta mediterránea que se ajuste a tus gustos y necesidades.</li>
+                    <li><strong>Seguimiento y Apoyo</strong>: Realizo un seguimiento regular para ajustar el plan según sea necesario y ofrecerte apoyo continuo.</li>
+                </ol>
+            </div>
+        </section>
+        <dialog id="details-dialog" style="align-items: center;">
+            <div id="details-content" style="align-items: center;"></div>
+            <button id="close-dialog" style="align-items: center;">Cerrar</button>
+        </dialog>
+        </main>
     <footer>
         <p>Teléfono: 686088569 | Email: susana.ml8@hotmail.com</p>
         <div class="social-media">
@@ -30,12 +84,14 @@
                 <img src="imagenes/icono_facebook.png" alt="icono">
             </a>
             <a href="https://instagram.com" target="_blank">
-            <img src="imagenes/icono_instagram.png" alt="icono">
+                <img src="imagenes/icono_instagram.png" alt="icono">
             </a>
         </div>
     </footer>
-    <a href="https://wa.me/1234567890" class="whatsapp" target="_blank">
+    <a href="https://wa.me/+34686088569" class="whatsapp" target="_blank">
         <img src="imagenes/whatsapp-icon.png" alt="WhatsApp">
     </a>
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
+
